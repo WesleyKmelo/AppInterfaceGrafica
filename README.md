@@ -21,7 +21,7 @@ Através do método *Random* do ***java.util*** é gerado um número aleatório 
 
 ### Observações
 
-Para que os componentes do aplicativo possam funcionar é necessário acrescentar um ***HANDLER*** para cada componente que precisa ser tratado. O ***HANDLER*** nada mais é que uma classe que tem métodos para se trabalhar com os componentes solicitados, entre eles o *ActionListener*.
+Para que os componentes do aplicativo possam funcionar é necessário acrescentar um ***HANDLER*** para cada componente que precisa ser tratado. O ***HANDLER*** é uma classe que foi criada no app para poder importar métodos de manutenção de eventos , como o *ActionListener*.
 
 Para funcionar é necessário criar uma instância da classe ***HANDLER*** e em seguida atribuir ao componente os métodos necessários. No caso deste aplicativo foi foi implementado a interface *ActionListener* que automaticamente pede que seja feita uma sobrecarga do método *actionPeformed(ActionEvent e)*. 
 
