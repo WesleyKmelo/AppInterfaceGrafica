@@ -15,8 +15,8 @@ public class principal extends JFrame {
     
     
     public void gerarNumeroAleatorio(){
-        Random numRand = new Random();
-        numeroGerado = numRand.nextInt(1000)+1;           
+        Random numRand = new Random();   
+        numeroGerado = numRand.nextInt(1000)+1; 
     }
 
 
@@ -42,7 +42,10 @@ public class principal extends JFrame {
                     }else{
                         JOptionPane.showMessageDialog(principal.this, "ACERTOU MISERÁVI");
                         aviso.setText("Tentativas feitas => "+ tentativa);
+                        String nSorteado = inputNumber.getText();
+                        inputNumber.setText("Número Sorteado => "+ nSorteado);
                         inputNumber.setEditable(false);
+                        testPalpite.setEnabled(false);
                     }
             } catch (NumberFormatException e) {
                JOptionPane.showMessageDialog(principal.this, "Digite APENAS NÚMEROS meu camarada !!!");
@@ -105,6 +108,7 @@ public class principal extends JFrame {
                 gerarNumeroAleatorio();
                 inputNumber.setEditable(true);
                 inputNumber.setText("");
+                testPalpite.setEnabled(true);
                 aviso.setText("Gerando outro número...");   
 
             }else if(e.getSource()==testPalpite){   // <= se o botão testPalpite foi clicado
